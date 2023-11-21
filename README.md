@@ -24,7 +24,7 @@ pip install tensorflow-gpu==1.15.5
 
 pip install -U scikit-image==0.16.2
 
-## 
+
 
 ## 설치
 
@@ -53,7 +53,6 @@ Mask_RCNN\model\balloon\datasets
     https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
     
 
-## 
 
 ## 실행
 
@@ -69,29 +68,17 @@ python [balloon.py](http://balloon.py/) --dataset ../../model/balloon/datasets -
 
 실행이 끝나면 command창 마지막에 다음과 같은 안내가 표시
 
-Running on ../../model/balloon/datasets/val/24631331976_defa3bb61f_k.jpg
-
-Processing 1 images
-
-image                    shape: (2048, 1323, 3)       min:    0.00000  max:  255.00000  uint8
-
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-
-image_metas              shape: (1, 14)               min:    0.00000  max: 2048.00000  float64
-
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-
-Saved to  splash_20231121T091448.png
+> Saved to  splash_20231121T091448.png
 
 Mask_RCNN\samples\balloon 폴더에 splash_20231121T091448.png 파일로 들어가면 결과가 나옴
 
-## 
+
 
 ## 출처
 
 https://hdongle.tistory.com/202
 
-## 하단은 원본 레포지토리의 readme
+## 하단은 원본 레포지토리의 README
 
 # Mask R-CNN for Object Detection and Segmentation
 
