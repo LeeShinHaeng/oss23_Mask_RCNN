@@ -1,3 +1,98 @@
+# oss23_Mask_RCNN
+
+## 실행환경
+
+conda가상환경
+
+python = 3.7
+
+keras = 2.1.2
+
+tensorflow-gpu = 1.15.5
+
+scikit-image = 0.16.2
+
+### command
+
+conda create -n ENV_NAME python==3.7
+
+conda activate ENV_NAME
+
+pip install keras==2.1.2
+
+pip install tensorflow-gpu==1.15.5
+
+pip install -U scikit-image==0.16.2
+
+## 
+
+## 설치
+
+### git clone
+
+git clone [https://github.com/matterport/Mask_RCNN](https://github.com/matterport/Mask_RCNN.git)
+
+### 폴더 생성
+
+Mask_RCNN\model\balloon\datasets
+
+### 다운로드 링크
+
+- 다운로드 후 Mask_RCNN 폴더로 이동
+    
+    https://github.com/matterport/Mask_RCNN/releases/download/v2.1/mask_rcnn_balloon.h5
+    
+    https://github.com/matterport/Mask_RCNN/releases/download/v1.0/mask_rcnn_coco.h5
+    
+- 다운로드 후 Mask_RCNN\model\balloon\datasets 폴더로 이동
+    
+    (Mask_RCNN\model\balloon\datasets\train
+    
+    Mask_RCNN\model\balloon\datasets\val 폴더가 생기도록)
+    
+    https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
+    
+
+## 
+
+## 실행
+
+Mask_RCNN\samples\balloon 폴더로 이동한 후 아래의 명령어 실행
+
+명령어 중 24631331976_defa3bb61f_k.jpg 부분에서 사진 파일 변경 가능
+
+### command
+
+python [balloon.py](http://balloon.py/) --dataset ../../model/balloon/datasets --weights ../../mask_rcnn_balloon.h5 --logs ../../model/balloon/logs --image ../../model/balloon/datasets/val/24631331976_defa3bb61f_k.jpg splash
+
+### 결과
+
+실행이 끝나면 command창 마지막에 다음과 같은 안내가 표시
+
+Running on ../../model/balloon/datasets/val/24631331976_defa3bb61f_k.jpg
+
+Processing 1 images
+
+image                    shape: (2048, 1323, 3)       min:    0.00000  max:  255.00000  uint8
+
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
+
+image_metas              shape: (1, 14)               min:    0.00000  max: 2048.00000  float64
+
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
+
+Saved to  splash_20231121T091448.png
+
+Mask_RCNN\samples\balloon 폴더에 splash_20231121T091448.png 파일로 들어가면 결과가 나옴
+
+## 
+
+## 출처
+
+https://hdongle.tistory.com/202
+
+## 하단은 원본 레포지토리의 readme
+
 # Mask R-CNN for Object Detection and Segmentation
 
 This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow. The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
